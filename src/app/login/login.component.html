@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style=" margin-top: 20%">
+        <img
+          class="card-img-top"
+          src="assets/images/angular-electron.png"
+          alt="Card image cap"
+        />
+
+        <div class="card-body">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="logreg-forms">
+        <form class="form-signin">
+          <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
+            Sign in
+          </h1>
+          <div class="social-login">
+            <button class="btn facebook-btn social-btn" type="button">
+              <span
+                ><i class="fab fa-facebook-f"></i> Sign in with Facebook</span
+              >
+            </button>
+            <button class="btn google-btn social-btn" type="button">
+              <span
+                ><i class="fab fa-google-plus-g"></i> Sign in with Google+</span
+              >
+            </button>
+          </div>
+          <p style="text-align:center">OR</p>
+          <input
+            type="email"
+            id="inputEmail"
+            class="form-control"
+            placeholder="Email address"
+            required=""
+            autofocus=""
+          />
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control"
+            placeholder="Password"
+            required=""
+          />
+
+          <button class="btn btn-success btn-block" type="submit">
+            <i class="fas fa-sign-in-alt"></i> Sign in
+          </button>
+          <a routerLink="" id="forgot_pswd">Forgot password?</a>
+          <hr />
+          <!-- <p>Don't have an account!</p>  -->
+          <button
+            routerLink="/signup"
+            class="btn btn-primary btn-block"
+            type="button"
+            id="btn-signup"
+          >
+            <i class="fas fa-user-plus"></i> Sign up New Account
+          </button>
+        </form>
+
+        <br />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table">
+        <tr>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td>{{ user.email }}</td>
+          <td>{{ user.password }}</td>
+        </tr>
+      </div>
+    </div>
+  </div>
+</div>
